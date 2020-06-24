@@ -1,0 +1,12 @@
+import numpy as np
+from astropy.io import ascii
+import matplotlib.pyplot as plt
+
+dat = ascii.read('/home/samir/Downloads/PrimaryDataTable.csv')
+
+allp = 100 * dat['p'].data
+
+plt.hist(allp, color = 'blue', edgecolor = 'black', bins=100)
+plt.xlabel('Degree of polarization (percentage)')
+plt.ylabel('Number of stars')
+plt.show()
